@@ -1,0 +1,146 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1290,1663</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="476,1598" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Arcadia Financial - Login" sap:VirtualizedContainerService.HintSize="434,1298" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="ab459dc2-97ba-4c52-84d0-3740c8598618" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="376,1038" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="Login" />
+              <Variable x:TypeArguments="ss:SecureString" Name="Senha" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;Login_Banco&quot;).ToString]" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="334,192" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Senha]" Username="[Login]" />
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,224" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="ab459dc2-97ba-4c52-84d0-3740c8598618" Text="[Login]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-arcadiabanklogin.html" DesignTimeRectangle="675, 443, 588, 69" ElementType="InputBox" FriendlyName="'INPUT inputEmail'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='email' class='form-control' aaname='Email address' /&gt;" Guid="457b1ead-7d0f-44ff-907b-7bb6d4a0f1b6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAlAAAABJCAYAAADypBg/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAATQSURBVHhe7dy9TtxKGIDhcyunSJHLQhS5EgpyJ5G4FDgpcqKgiEhRmkigFJHSBsff7qx3PB6bnQ2rQPZ5pK/A+Ge8FLyyEf90d1edMcYYY4zZfQSUMcYYY0zjCChjjDHGmMaZBNTtl3fdh+vr7r//PxpjjDHGHO1ED0UXla0UMwqoz5/edzc3H7sf37919/c/OwCAYxQdFD0UXRR9lPdSzBBQUVixEwAAW9FH5ZOoIaDiMVWUFgAAW9FH0UnVgIp3fV7bAQCMRR9FJ80GFAAAUwIKAKCRgAIAaCSgAAAaCSgAgEYCCgCgkYACAGgkoAAAGgkoAIBGAgoAoJGAAgBoJKAAABoJKACARgIKAKCRgAIAaCSgAAAaCSgAgEYCCgCgkYACAGgkoAAAGgkoAIBGAgoAoJGAAgBoJKAAABodTUBdnb/s/n3xuuvvbu3rRXfy4mV3dpm+Ppi33Vl/nZOLu/T1krvuzWm/zvO36WsA4Ck6XEBdvu6DJaJlOrvFxOMSUADAYzl4QB0+UPYkoACAPQkoAQUANPrjAbV6tXZ60d2moJm85iteBdbOt349l0/2qi4ZrpO+bgqoyuvI+nHrWNru96p783UuoFIsZfufXVYCKlvncJ/5fVTPk76VmXxGRaTdXrwaf390DQAg9zQCqviFvfllfnben2OyPaIkbQhxnVEMpKAoAmD/gIoAGgdZdR2bAKzET9zLOKBSaI3WmMVX5Rwnp68qEZaOyfdPn/t239rn0R+XHbP+GeT32B9zPv78AICtJxJQRYwMT1XK7etgmIZEYXXt8bH7B1RNuY56tK1MgqYWLMlShFXOPbmnZLT9wfvc8TMFAAYHD6jpVMJml1duKylU8sCoqUTD5Hy/FVDFOhbPVQbKUrBU7i+de7r/wnlGAbneb/4zW4g/AKDqaTyBeugpymA+oNYhNp5HDahaEG7WMQqWUhE6i9edD6jJ/mn7ZE3DbNcz+vumWkjl9yakAOBBzz6ghjh4IDr2DqghVIq/EcrX8QcD6sH1Z/LIrB2Xh1b9CRkAEJ55QM28xqrExb4BtdM6ls6Vvrdd48Krt9rrttlzL51nSVp77W+wknVozQUhAPC8A2omLjZPUvLt+wVU5YlQSMeWITfZr7dZyzZ00jkr9zy8StspoDahMx9Cc9ZrWgikHX92AHCs/oonUKP9NhFSXHu/gNpESh4b6Zoxeeik646eCMW2+PcD5fZJgPVW2/p9y2BbWufmPOXn1F93uF7sk5+v9hkWx8/9TACAtYMHVHWyX86/F1C9TUTk565Ex74BNVxzuEbEVGUdobzn1fVmXrWV6149SZq/v/l1ZkE3OlcyuU4/o3VXjq/8PACArcMFFADAX0pAAQA0ElAAAI0EFABAIwEFANBIQAEANBJQAACNBBQAQCMBBQDQSEABADQSUAAAjQQUAEAjAQUA0EhAAQA0ElAAAI0EFABAIwEFANBIQAEANBJQAACNBBQAQCMBBQDQaDGg7u9/pt0AAAjRR7MB9eH6uvvx/VvaFQCAEH0UnVQNqNsv77qbG6/xAABy0UfRSdWAivn86f1qpygtr/MAgGMVHRQ9FF0UfZT3UswooGKisOIxVbzrM8YYY4w51okeKp88bWYSUMYYY4wxZmmuul91lqeeYYXOsgAAAABJRU5ErkJggg==" InformativeScreenshot="fb4e906d71dce2686872b697b01ec361.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Arcadia Financial - Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="675, 443, 146, 69" ElementType="Text" FriendlyName="'Email address'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Email address' check:innerText='Email address' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJYAAABJCAYAAADfad8YAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPQSURBVHhe7ZhLTuNAEEDnKrNgwbEQC06SRbgJUo4Cw4JBRChIiA1SEAsktqRx2+VOf8om2C6ioPekWqTpT3XXs9vij3u5cgQxdSAWYRKIRZhEIdb66cbdLZfu3/97ghgciViPD7dutbp372+vbrP5cABDCWL5N5WXCmAKglj++vNvKoApCGL5e5HrD6YiEQtgKhALTEAsMAGxwATEAhMQC0xALDABscAExAITEAtMQCwwAbHABMQCExALTEAsMAGxwATEAhMQC0xALDABscAExAITEAtMQCwwAbHAhF8r1tX82P09OnfV7hqeF+7k6NjNLuW3GdduVq1zsniR3328uIvTKs/5tfz+PUwn1uV5VUhfzDJ2O+RpQaz9MrlY9oUbCGL9KIg1OYjl+XGx6ivqdOHWUujiusyuVG2+5pqLI7ryhLCO/P6WWMq1ro9rJNr2O3MXz11iiURR/9mlIlaUZ9hnvA91HvlTRHFGmbzrxVn692SN8exHrGwj7SZn82qOot0XSxo8fp3kkOSgs4MZLpYXIxVVzaN9MBQp/F5SsUTAJMdISmWOk9MzRU4ZE/eXc9/21c6jGheNaWoQ77EaM0/Pbyx7EisrUngK8/bmIMsDzqjXTscOF0sjz0OXuaYotFZIoU9OZe5iT0LS/uU+dzzTkUwuVhlKwXe5umqkgPHBayiHWcw3Sqwsj9658sL1FVLZn8xd9u+ZJ3mwmn7dZ9bzUEzI/r6x5HfLd8VqBE1jUrG0B6XNIylkTiZA77rdYhX9pb3IKcQ2n+T7SRMs3puRYAcnVji0L4oxWKxQwOwbJM5jj2J9mX9E/PBp42IB9TfqcA5MrI7rQDn0oWLtlEffXPK3bY49V5h2bXXO3TdPH5K79o0nNAJ2PSjDOCyxOg69ffLi9mFiKW8Qj4zNBS/6VbS5bAWQOZU9hytpJ7FaAboF6aLJqUecHWv3HQ7yjZX0a4uTrT1MrLZ4cRFkTR+xALJu8gbxbf7fBHl7IWZF3Vb1zUXuy7OdJz+nat2wnu8Tz6edYTa+qyZjmFwsNaKkx4lV0R5uPLdSjKFihTXDGl4yJQ9Pvud6vY4rK8+7fvN07687z0j0ZC6hWKeKJG9lvFKPsUwnFkAEYoEJiAUmIBaYgFhgAmKBCYgFJiAWmIBYYAJigQmIBSYgFpiAWGACYoEJiAUmIBaYgFhgAmKBCYgFJiAWmIBYYEIi1mbzIc0A4whi3S2X7v3tVZoBxhHEWj/duNWK6xCmIYjl4/HhtpbLv7m4FmEMiVg+/JvLX4v+m4sghkYhFkGMjyv3CQHWU/elRBqKAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,249" sap2010:WorkflowViewState.IdRef="NTypeInto_2" IsPassword="True" ScopeIdentifier="ab459dc2-97ba-4c52-84d0-3740c8598618" SecureText="[Senha]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-arcadiabanklogin.html" DesignTimeRectangle="675, 531, 588, 69" ElementType="InputBoxPassword" FriendlyName="'INPUT inputPassword'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control' aaname='Password' /&gt;" Guid="c9a8d45c-230b-47ca-87e1-363aae48e6ed" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAlAAAABJCAYAAADypBg/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARmSURBVHhe7dpPbttGFMDhXqWLLnqswAufxAv7JgF0FLtZpEGMwAGCbALYyCJAtjGrRw4l/hlSfQVsWfX3AQ+tOCSlZPXDTH5rHm4aY4wxxhjz70dAGWOMMcYkR0AZY4wxxiRnFlD3X983H29vm7/+/mSMMcYY82oneii6aNpKMaOA+vL5Q3N396n5+eN78/j4qwEAeI2ig6KHoouij4a9FLMLqCisuAkAgL3oo+lO1C6gYpsqSgsAgL3oo+ikakDFWZ9jOwCAseij6KTFgAIAYE5AAQAkCSgAgCQBBQCQJKAAAJIEFABAkoACAEgSUAAASQIKACBJQAEAJAkoAIAkAQUAkCSgAACSBBQAQJKAAgBIElAAAEkCCgAgSUABACQJKACAJAEFAJAkoAAAkgQUAECSgAIASBJQAABJAurYrq+a3/84b95+K58BgBfv6QKqDYM/53O2ae7LLWwJKAA4OU8eUBfX5XProXl7FiF11Wy/hSCgAODkPHNAhXfNxfb6m81D+fzKCSgAODlHCKiyCzU4yru5HBzxtVPfoZrdd/murHTq6/Pv63QhN31H823TvNleH/3ucm347loAtt8f3zO4f/Se8neym7hXQAHAyTleQPXhEveNIqYWPLVr2wDaPbe+fr853/6WSZTtImd8fXpv93khqCbx1QXU+XZtHoC19/TXBBQAnJbnD6gSH6tHeNNdmfLMPMaK/7DexsvlVbsLNbzeRlAfRmu/tfLn63fAZr9j5T3dMwIKAE7JMwdUOTYb7RRVzIJn4bht59D6ZNerfL647v67D5vuPf33Tnejxrp7h1HUxdDS7tPCe6axCAC8eE8eUNNZ2nnqd2+GM4yv/XHXdiqhdGi9fX8fbm2gddHSPtdfn8TM6JmZaZQt37/6HgEFACfnmXeg5nbhM4yeypFbbxhaqfVhqMT/j6Kp2x0axdSWgAIAao4cUPNjsNZKQHVKvCwer9XW98dzETTzY7vpcV4fd0vfsXCEVwmltfd0awIKAE7JcQNqIZT6Xam1Zw+Fx3y93zGKfzg+fq4Lqs0usHbK76seO1Z2jhZ3mhb/LvrQE1AAcEpexA7UKDrKc6NnI2RG/66pj6Fy7dB60YfZdDdo6XqoxtxCWK0d1bVrtXA7Ww9BAODlOXJAbZUY6QKmBEi5Ngqo4T0xwzg6tN7r75uuLV3vDaKun9qfay2gQhdR+2kDrH23gAKAU/J0AQUA8D8loAAAkgQUAECSgAIASBJQAABJAgoAIElAAQAkCSgAgCQBBQCQJKAAAJIEFABAkoACAEgSUAAASQIKACBJQAEAJAkoAIAkAQUAkCSgAACSBBQAQJKAAgBIElAAAEmrAfX4+KvcBgBAiD5aDKiPt7fNzx/fy60AAIToo+ikakDdf33f3N05xgMAGIo+ik6qBlTMl88f2puitBznAQCvVXRQ9FB0UfTRsJdiRgEVE4UV21Rx1meMMcYY81onemi689TPLKCMMcYYY8za3DT/AGfUv1VhV1M0AAAAAElFTkSuQmCC" InformativeScreenshot="b69754ea66c297664c23f4ab4938f78c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Arcadia Financial - Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="675, 531, 110, 69" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Password' tag='LABEL' type='' class='' check:innerText='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHIAAABJCAYAAADhYHITAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMTSURBVHhe7Z3NblMxEEZ5FRYseKyqiz5JFsmbVMqjJHQBiKoqEmJTKRELJLbUeOyx498bQBEwH9+RRuXavr43c8ZTusoLd9w7hv2gSJCgSJDoRB4+v3Uf7u/dm3cPDENRifz08b17fHxw375+cc/P3x2xQxYpJ1EkEptkkdJO5SQSm2SR0mfZTu1SiSR2oUgQKBIEigSBIkGgSBAoEgSKBIEiQaBIECgSBIoEgSJBoEgQKBIEigSBIkGgSBAoEgSKBIEiQaBIECgSBIoEgSL/NLuNe/nqxt0+6fWFuJzI8IKv+7jeuoMuIR4rIlc7vQ4c3e21CN04/xQi2BQp3LmVH7/aHvX6P8euSD2VRYvdr4vWG2J8Yrt16zudiYzn++dFYkG1e7inrbvy49V761i596gQw/PlOcX6ah/NSQ5Za15kSqCsq5I5SvxozIvI9y3PH7Y3/l2a4sjJrsfbtfF6IrYpgijyxs/1hTjaJ43ZFKlJWGytbZXqPX1RKL8xH5K43oRTWY4HGUnQ0rsOPl/qCN17LOwT7zEnUttZdXIGdImftMHMufmmC+j1ahd/nhIc90nPbU9nTVxbyolSZqdxsk9btBfi4iLbmJ3EVM1llEVwakM+BsLOzYf9UwGFQonJC/el8Sap1T0dbXHM1y/uY0Vk12YasoAy+YNWmCiF/9J8mTD5dyUvnpZKqocihZ8S2benwILIiCZx2vZG86e2KYnt22nbZlORzZ4xaa0DYUv7xDnrIifC0ilduvdcAvr5dILkPzj1fVHsNovO6PsNfx0MTtL05E1zkQrOukit6urD633VvZLQ6vdekqJj5+aVVCDt6ZiNC8OimgheaqFhblRA/s8VAJEeTUpMpCZCxyqR5RqJUtK5+URa187NxhNFcaUYfa4lkUKUeYpQCGHvf1kk+atQJAgUCQJFgkCRIFAkCBQJAkWCQJEgUCQIFAkCRYJAkSBQJAgUCQJFgkCRIFAkCBQJAkWCQJEgVCL53Vh2ySL5bXW2ySL5/ZG2ySIl+I2udqlESvA7lm1GJ5JhMfbuB/nSzf9tYjkCAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="ab459dc2-97ba-4c52-84d0-3740c8598618" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-arcadiabanklogin.html" DesignTimeRectangle="1185, 677, 78, 45" ElementType="Text" FriendlyName="'Login'" FullSelectorArgument="&lt;webctrl aaname='Login' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Login' tag='A' type='' class='btn btn-dark' check:innerText='Login' /&gt;" Guid="26659aca-8113-48bb-9f79-63764502bb73" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFIAAAAxCAYAAABJTP5vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIJSURBVGhD7ZsxcsIwEEVzlWQmmUnqTNKGm6RLkXNAQZ82PTM+B9BwAoYTpDIXWLySDZK1MggWFMPXzCuQ1zL7vJJdWHf0tyBwOhCpBEQqEYj8/RnRYPBBD08vdP/4DGrYB3thP21njCfy++uTXt/exYGAhf2wJ9cbsxXJpiHxMNhTuzK3IrlspZOADPsSRWJNTIN9iSKlYNANRCoBkUpApBIQqQREKgGRSkCkEhCpBEQqAZFKXKHIgpZUtVUhHDsfZxKZJxkLRPYaiFQiv8hixZFeWxZCnBRbzmlo+tY0HTVx9trlbLw7bzSnsurjcYezNZ+5bdFrJZJV5MR4cSVU1LI8ERWNADfxnZTDRJbl2uuXxjyWfCJrYVISNkFHTiOiJZcJb0ZcpKngps+J1ViCsok0AoLEapypyL+t2BVN2nFMwtQOb8SYpuZA5H8kkElknUD0uC/DVt3pIqXq77yhCfRHZCzZ2xapN7WD9fTWRO5/2DjiorF1Zd+0yAqThCehIiJNiuU+fqW5fpFi86eorT63tcQ6WJm7ZmRd9xp5OTpfjS5Iz0Xue/pfjp6I5OkaVp2d6vmrkemJyHB9NE1hbdOiNyL/OxCpBEQqAZFKQKQSEKmEKBLfkKcR/YYcuxrSiO5qwD6bw+ncZ8Ng59d+2E/nzq8GNs1lizXTh32wl3YlNgQiwTEsaAM65IR8V8aQZQAAAABJRU5ErkJggg==" InformativeScreenshot="4e7af3c758e8041d06016a04b09fac45.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Arcadia Financial - Login' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1048" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAESSURBVDhPzdGxSkJxFMfxq6BODkIugYuDi5BLzQ2+QaOP4AP0GLkYTSJRBFFNoQ3lFAb1AC3OQi8QBEH1/V6OBHkDCQL/8IE/5/zO8d5r8i9n4+C4iC3sB+/FaGcfAjlsooMLvOAjeLdmz0wuxtLBEnbRwzPe8fkLe2bMOlNyQQP38JeyhrKYdabhgjxa6OMcVxhiAB9b3q3ZM2PWmXy8SPoqBRziEU1UcB28W7NnphBj34eiX/4Gr9hBFbPg3Zo9M8v/iMVorseCbfxcYC17AYUy2njCG7rYwzx4t2bPjNlyjKcL/MKXuMUEY4xwF7xbs2fGbHMxXMMZHjBdkVlnai6o4winOFmRWWfq6VP8/STJF/fpUrTlJmQmAAAAAElFTkSuQmCC" InformativeScreenshot="9f1cfd24248089fdf7cdace1c5846d38.png" Selector="&lt;html app='chrome.exe' title='Arcadia Financial - Login' /&gt;" Url="https://developer.automationanywhere.com/challenges/automationanywherelabs-arcadiabanklogin.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

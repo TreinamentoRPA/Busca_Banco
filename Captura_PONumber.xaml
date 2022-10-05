@@ -1,0 +1,250 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Captura_PONumber" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1290,2441</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="34">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Windows.Forms</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="41">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualStudio.Services.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>WindowsFormsIntegration</AssemblyReference>
+      <AssemblyReference>System.Windows.Forms</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="634,2376" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="Contador" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:QueueItem)" Name="SaidaFila" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetQueueItems Duration="{x:Null}" From="{x:Null}" Priority="{x:Null}" Reference="{x:Null}" Skip="{x:Null}" TimeoutMS="{x:Null}" To="{x:Null}" Top="{x:Null}" DisplayName="Get Queue Items" FilterStrategy="StartsWith" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="592,83" sap2010:WorkflowViewState.IdRef="GetQueueItems_1" QueueItemStates="New, InProgress, Failed" QueueName="[Config(&quot;OrchestratorQueueName&quot;).ToString]" Result="[SaidaFila]" />
+    <If Condition="[SaidaFila.count &gt; 0]" sap:VirtualizedContainerService.HintSize="592,377" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="326,175" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:DeleteQueueItems TimeoutMS="{x:Null}" DisplayName="Delete Queue Items" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="284,83" sap2010:WorkflowViewState.IdRef="DeleteQueueItems_1" QueueItems="[SaidaFila]" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Automation Anywhere Labs - Quarter Close Challenge" sap:VirtualizedContainerService.HintSize="592,1744" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="b33b5338-674d-444c-a18d-b2256b2cf745" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="558,1524" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="SaidaPoNumber" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="516,63" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">1</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="516,1329" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="480,1156" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="SaidaValor" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,1064" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,817" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:String" Name="SaidaCartao" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text '622503873'" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b33b5338-674d-444c-a18d-b2256b2cf745" Timeout="3" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-quarterclose.html" DesignTimeRectangle="316, 523, 312, 45" ElementType="InputBox" FriendlyName="'622503873'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl tag='INPUT' id='PONumber{0}' /&gt;&quot;, Contador)]" FuzzySelectorArgument="&lt;webctrl tag='INPUT' id='PONumber1' type='text' class='form-control' aaname='' /&gt;" Guid="2c925036-7f38-4c99-861d-338d30366dad" ImageBase64="" InformativeScreenshot="149d930aea40ae58b346a6eb801ff841.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[SaidaPoNumber]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text '3861.62'" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="b33b5338-674d-444c-a18d-b2256b2cf745" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-quarterclose.html" DesignTimeRectangle="1136, 512, 207, 45" ElementType="InputBox" FriendlyName="'3861.62'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl id='PaymentAmount{0}' tag='INPUT' /&gt;&quot;, Contador)]" FuzzySelectorArgument="&lt;webctrl id='PaymentAmount1' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="09cbc582-2a7f-44f2-8aa8-0157e1b5bb83" ImageBase64="" InformativeScreenshot="be9b8f85f02ef2f4ccd558d8d0c1feab.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[SaidaValor]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <uix:NGetText DisplayName="Get Text 'Credit Card (..4513)'" sap:VirtualizedContainerService.HintSize="334,160" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="b33b5338-674d-444c-a18d-b2256b2cf745" Version="V1">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="https://developer.automationanywhere.com/challenges/automationanywherelabs-quarterclose.html" DesignTimeRectangle="575, 879, 248, 45" ElementType="InputBox" FriendlyName="'Credit Card (..4513)'" FullSelectorArgument="[String.Format(&quot;&lt;webctrl id='PaymentAccount{0}' tag='INPUT' /&gt;&quot;, Contador)]" FuzzySelectorArgument="&lt;webctrl id='PaymentAccount1' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="c40fa28b-99f3-4621-97a2-91a8d5d6bd25" ImageBase64="" InformativeScreenshot="68a715f61db2d900e2d228c4419a89f2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                          <uix:NGetText.Text>
+                            <OutArgument x:TypeArguments="x:String">[SaidaCartao]</OutArgument>
+                          </uix:NGetText.Text>
+                        </uix:NGetText>
+                        <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="[Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[Config(&quot;OrchestratorQueueName&quot;).ToString]" Reference="[SaidaPoNumber]">
+                          <ui:AddQueueItem.ItemInformation>
+                            <InArgument x:TypeArguments="x:String" x:Key="Cartao">
+                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SaidaCartao" />
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="Valor">
+                              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="SaidaValor" />
+                            </InArgument>
+                          </ui:AddQueueItem.ItemInformation>
+                        </ui:AddQueueItem>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,63" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:Int32">[contador]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:Int32">[Contador+1]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,25" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Assign sap:VirtualizedContainerService.HintSize="264,63" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[SaidaPoNumber]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[Nothing]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+              <ui:InterruptibleDoWhile.Condition>
+                <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="SaidaPoNumber &lt;&gt; &quot;&quot; or SaidaPoNumber &lt;&gt; Nothing" />
+              </ui:InterruptibleDoWhile.Condition>
+            </ui:InterruptibleDoWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1048" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="7a287c721f71831d1f62943eb5ad17c9.png" Selector="&lt;html app='chrome.exe' title='Automation Anywhere Labs - Quarter Close Challenge' /&gt;" Url="https://developer.automationanywhere.com/challenges/automationanywherelabs-quarterclose.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
